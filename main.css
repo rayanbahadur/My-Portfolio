@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;500;800&family=Space+Mono&display=swap');
+
+#home, .LoginContainer {
+    background-image: url("image/bg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+body{
+    background-color: black;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+    color: white;
+    font-size: 15pt;
+}
+
+h2{
+    font-size: 80pt;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    text-align: center;
+}
+/* ------------------------ Navigation Bar ------------------------*/
+.nav{
+    font-weight: 300;
+    font-size: 20pt;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30pt;
+}
+
+.navList {
+    align-items: center;
+}
+
+.navList  .logo{
+    height: 33px;
+}
+.nav a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav a:hover{
+    color: #364443;
+}
+
+.navList ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap:25pt;
+}
+
+.navList .listItem {
+    display: inline-block;
+
+}
+.navList .listItemC {
+    font-weight: 500;
+    color: #658B89;
+    display: inline-block;
+
+}
+.navList {
+    display: inline-block;
+}
+.navList .listItemC a{
+    color: #658B89;
+}
+/* ------------------------ Main Text For Home ------------------------*/
+.miniAboutMe p{
+    font-family: 'Space Mono', monospace;
+    padding-top: 15pt;
+    text-align: center;
+}
+h1{
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 112pt;
+}
+.miniAboutMe h1{
+    text-align: center;
+}
+
+
+.HomeContainer {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: min-content 60% 30% 5%;
+    grid-template-areas:
+        "header"
+        "miniAboutMe"
+        "LinkButtons"
+        "footer" ;
+    min-height: 99vh;
+    max-height: 100vh;
+
+}
+.header{
+    grid-area: header;
+}
+
+.miniAboutMe{
+    grid-area: miniAboutMe;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LinkButtons{
+    grid-area: LinkButtons;
+}
+footer{
+    grid-area: footer;
+    font-weight: 400;
+    font-size: 12pt;
+    color: white;
+    text-align: center;
+    align-items: center;
+}
+/* ------------------------ Button Section ------------------------*/
+.button{
+    border: thick solid #658B89;
+    background-color: transparent;
+    color: #658B89;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 15pt;
+    letter-spacing: 5pt;
+    padding: 15pt 53pt;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 50pt;
+}
+.button:hover{
+    background-color: #658B89;
+    color: black;
+}
+.LinkButtons {
+    display: grid;
+    grid-template-columns: min-content;
+    grid-template-rows: min-content min-content;
+    grid-template-areas:
+        "b1"
+        "b2";
+    justify-content: center;
+
+}
+.b1{
+    grid-area: b1;
+}
+
+.b2{
+    grid-area: b2;
+    justify-content: center;
+    display: flex;
+}
+
+.b2 a{
+    padding-left: 5pt;
+    padding-right: 5pt;
+    padding-top: 12pt;
+}
+/* ------------------------ Main Text For About Me Page ------------------------*/
+.AboutMeContainer h2{
+    text-align: left;
+}
+.AboutMe{
+    text-align: justify;
+    padding-right: 50pt;
+}
+.AboutMe p{
+    font-weight: 300;
+    padding-bottom: 16pt;
+    line-height: 18pt;
+}
+.AboutMe #blue{
+    color: #658B89;
+    font-weight: 500;
+    padding-bottom: 0;
+}
+.header{
+    grid-area: header;
+}
+
+.AboutMeWrapper{
+    grid-area: AboutMeWrapper;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+
+.AboutMeContainer {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: min-content auto min-content;
+    grid-template-areas:
+        "header"
+        "AboutMeWrapper"
+        "footer" ;
+    min-height: 100vh;
+    max-height: 100vh;
+}
+
+.Profile{
+    display: grid;
+    grid-template-columns: min-content min-content min-content;
+    grid-template-rows: min-content min-content;
+    grid-template-areas:
+        "figure figure figure"
+        "b1a b2a b3a";
+    margin-top: 3%;
+}
+
+ footer{
+    margin-bottom: 1.9%;
+}
+.Profile figure{
+    grid-area: figure;
+}
+.b1a{
+    grid-area: b1a;
+}
+.b2a{
+    grid-area: b2a;
+}
+.b3a{
+    grid-area: b3a;
+}
+
+.Profile figure img {
+    width: 100%;
+}
+
+@media screen and (max-width: 1307px) {
+    .AboutMeWrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .AboutMeContainer h2{
+        text-align: center;
+    }
+    .AboutMeContainer {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: min-content min-content min-content;
+        grid-template-areas:
+        "header"
+        "AboutMeWrapper"
+        "footer" ;
+        min-height: 100vh;
+        max-height: 100vh;
+    }
+}
+/* ------------------------ Login Page ------------------------*/
+.LoginContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: #527c7e;
+    border-radius: 5pt;
+    padding: 20pt;
+    width: 300pt;
+    text-align: center;
+    color: black;
+
+}
+
+.LoginContainer h3 {
+    margin-top: 0;
+    margin-bottom: 2pt;
+    font-size: 36pt;
+    font-weight: 600;
+}
+
+#username, #password{
+    width: 50%;
+    padding: 12pt 20pt;
+    margin: 8pt 0;
+    display: inline-block;
+    border: 1pt solid #2a4845;
+    border-radius: 12pt;
+    box-sizing: border-box;
+}
+
+.LoginContainer button[type="submit"] {
+    background-color: transparent;
+    padding: 5pt 20pt;
+    cursor: pointer;
+    border: thick solid black;
+    color: black;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 800;
+    font-size: 12pt;
+    letter-spacing: 1pt;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 50pt;
+}
+/* ------------------------ Skills Page ------------------------*/
+.SkillsWrapper{
+    grid-area: SkillsWrapper;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10pt;
+    align-items: center;
+    margin-bottom: 100pt;
+
+}
+.Column{
+    background-color: #262523;
+    border-radius: 8pt;
+    text-align: center;
+    padding: 60pt 40pt;
+}
+#badge,#badge2{
+    padding: 60pt 46pt;
+}
+.skillCard{
+    scale: 1.25;
+}
+h3{
+    font-weight: 500;
+    font-size: 16pt;
+    letter-spacing: 1pt;
+    padding-top: 10pt;
+}
+.Heading{
+    grid-area: Heading;
+    margin-top: 100pt;
+    margin-bottom: 10pt;
+}
+.SkillsContainer {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: min-content min-content auto min-content;
+    grid-template-areas:
+        "header"
+        "Heading"
+        "SkillsWrapper"
+        "footer" ;
+    min-height: 100vh;
+    max-height: 100vh;
+}
+.skillCard img{
+    height: 100pt;
+    width: auto;
+}
+
+/* ------------------------ Education & Experience Page ------------------------*/
+.EdExContainer {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: min-content min-content auto min-content;
+    grid-template-areas:
+        "header"
+        "Heading"
+        "EdExWrapper"
+        "footer" ;
+    min-height: 100vh;
+    max-height: 100vh;
+}
+
+.EdExWrapper{
+    grid-area: EdExWrapper;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10pt;
+    align-items: center;
+    margin-bottom: 100pt;
+
+}
+
+.ColumnEdEx,.ColumnEdEx2{
+    background-color: #363D3D;
+    border-radius: 12pt;
+    text-align: center;
+    padding: 30pt 40pt;
+    width: 430pt;
+    max-width:430pt;
+    height: 355pt;
+    max-height: 355pt;
+    display: table;
+}
+.ColumnEdEx:hover,.ColumnEdEx2:hover{
+    background-color: transparent;
+    border-color: #658B89;
+    border-style: solid;
+    border-width: 10pt;
+    border-radius: 12pt;
+    padding: 20pt 30pt;
+}
+
+.EdExCard{
+    display: table-cell;
+    vertical-align: middle;
+}
+.EdExCard li{
+    padding-top: 5pt;
+}
+.EdExCard .subheading,.EdExCard .subheading1{
+    font-weight: 800;
+    padding-top: 0;
+}
+.EdExCard .subheading{
+    padding-top: 15pt;
+}
