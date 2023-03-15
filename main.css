@@ -72,9 +72,38 @@ h2{
 /* ------------------------ Main Text For Home ------------------------*/
 .miniAboutMe p{
     font-family: 'Space Mono', monospace;
-    padding-top: 15pt;
+    margin-top: 15pt;
     text-align: center;
 }
+
+.miniAboutMe .AboutDiv p {
+    width: 0;
+    animation: typing 12s steps(80), blink .5s, infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2pt solid;
+    animation-iteration-count: infinite;
+}
+
+@keyframes typing {
+    50% {
+        width: 80ch;
+    }
+    0% {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.miniAboutMe .AboutDiv p {
+    animation-fill-mode: forwards;
+}
+
 h1{
     font-family: 'Outfit', sans-serif;
     font-weight: 800;
