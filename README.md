@@ -1,5 +1,5 @@
 # My Portfolio Website
-###### Welcome to my portfolio website! This website showcases my skills, education, and experience as a professional in my field.
+###### Welcome to my portfolio website! This website showcases my skills, education, and experience as a student studying Computer Science.
 
 ## Pages on the Website
 + [Home](https://github.com/rayanbahadur16/myWebsite/blob/main/HomePage.html)
