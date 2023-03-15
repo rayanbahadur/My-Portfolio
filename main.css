@@ -285,7 +285,7 @@ footer{
     font-weight: 600;
 }
 
-#username, #password{
+#email, #password{
     width: 50%;
     padding: 12pt 20pt;
     margin: 8pt 0;
