@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;500;800&family=Space+Mono&display=swap');
 
+:root {
+    --colour: #9d0208;
+    --colourDarker: #6a040f;
+}
 #home, .LoginContainer {
     background-image: url("image/bg.png");
     background-repeat: no-repeat;
@@ -43,7 +47,7 @@ h2{
 }
 
 .nav a:hover{
-    color: #364443;
+    color: var(--colourDarker);
 }
 
 .navList ul {
@@ -59,7 +63,7 @@ h2{
 }
 .navList .listItemC {
     font-weight: 500;
-    color: #658B89;
+    color: var(--colour);
     display: inline-block;
 
 }
@@ -67,7 +71,7 @@ h2{
     display: inline-block;
 }
 .navList .listItemC a{
-    color: #658B89;
+    color: var(--colour);
 }
 /* ------------------------ Main Text For Home ------------------------*/
 .miniAboutMe p{
@@ -151,9 +155,9 @@ footer{
 }
 /* ------------------------ Button Section ------------------------*/
 .button{
-    border: thick solid #658B89;
+    border: thick solid var(--colour);
     background-color: transparent;
-    color: #658B89;
+    color: var(--colour);
     font-family: 'Outfit', sans-serif;
     font-weight: 800;
     font-size: 15pt;
@@ -166,7 +170,7 @@ footer{
     border-radius: 50pt;
 }
 .button:hover{
-    background-color: #658B89;
+    background-color: var(--colour);
     color: black;
 }
 .LinkButtons {
@@ -208,7 +212,7 @@ footer{
     line-height: 18pt;
 }
 .AboutMe #blue{
-    color: #658B89;
+    color: var(--colour);
     font-weight: 500;
     padding-bottom: 0;
 }
@@ -298,7 +302,7 @@ footer{
 }
 
 .container {
-    background-color: #527c7e;
+    background-color: var(--colour);
     border-radius: 5pt;
     padding: 20pt;
     width: 300pt;
@@ -320,7 +324,7 @@ footer{
     padding: 12pt 20pt;
     margin: 8pt 0;
     display: inline-block;
-    border: 1pt solid #2a4845;
+    border: 1pt solid #280709;
     border-radius: 12pt;
     box-sizing: border-box;
 }
@@ -429,7 +433,7 @@ h3{
 }
 .ColumnEdEx:hover,.ColumnEdEx2:hover{
     background-color: transparent;
-    border-color: #658B89;
+    border-color: var(--colour);
     border-style: solid;
     border-width: 10pt;
     border-radius: 12pt;
@@ -503,9 +507,8 @@ h3{
 .BlogContainer h3{
     font-weight: 800;
     padding-bottom: 8pt;
-    color: #658B89;
-    text-shadow: 0 1pt black;
-    border-color: midnightblue;
+    color: var(--colour);
+    text-shadow: 0 1pt var(--colourDarker);
 }
 h5{
     letter-spacing: 0.5pt;
@@ -522,7 +525,7 @@ h5{
 }
 
 .container {
-    background-color: #527c7e;
+    background-color: var(--colour);
     border-radius: 5pt;
     padding: 20pt;
     width: 300pt;
@@ -544,7 +547,7 @@ h5{
     padding: 12pt 20pt;
     margin: 8pt 0;
     display: inline-block;
-    border: 1pt solid #2a4845;
+    border: 1pt solid var(--colourDarker);
     border-radius: 8pt;
     box-sizing: border-box;
 }
@@ -572,7 +575,7 @@ h5{
     margin-left: 10pt;
 }
 .BlogContainer button[type="submit"]:hover, .BlogContainer button[type="reset"]:hover{
-    background-color: #658B89;
+    background-color: var(--colour);
     color: black;
     border-color: black;
 }
