@@ -85,7 +85,7 @@ h2{
         justify-content: center;
     }
 
-    .navList .listItem {
+    .navList .listItem, .listItemC {
         display: block;
         margin-bottom: 10px;
     }
