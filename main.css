@@ -4,7 +4,7 @@
     --colour: #9d0208;
     --colourDarker: #6a040f;
 }
-#home, .LoginContainer {
+#home, .bigContainerLogin {
     background-image: url("image/bg.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -72,6 +72,40 @@ h2{
 }
 .navList .listItemC a{
     color: var(--colour);
+}
+
+@media screen and (max-width: 1096px) {
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navList ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navList .listItem {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navList ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10pt;
+    }
+
+    .navList .listItem {
+        display: block;
+        margin-bottom: 10px;
+    }
 }
 /* ------------------------ Main Text For Home ------------------------*/
 .miniAboutMe p{
@@ -298,7 +332,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 80vh;
     margin: 0;
     padding: 0;
 }
