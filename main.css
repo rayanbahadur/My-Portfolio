@@ -152,6 +152,8 @@ footer{
     color: white;
     text-align: center;
     align-items: center;
+    padding-top: 10pt;
+    padding-bottom: 10pt;
 }
 /* ------------------------ Button Section ------------------------*/
 .button{
@@ -237,7 +239,7 @@ footer{
         "header"
         "AboutMeWrapper"
         "footer" ;
-    min-height: 100vh;
+    min-height: 99vh;
     max-height: 100vh;
 }
 
@@ -287,7 +289,7 @@ footer{
         "header"
         "AboutMeWrapper"
         "footer" ;
-        min-height: 100vh;
+        min-height: 99vh;
         max-height: 100vh;
     }
 }
@@ -378,7 +380,7 @@ h3{
     margin-top: 50pt;
     margin-bottom: 10pt;
 }
-.Heading .recursive{
+.Heading .red{
     color: var(--colour);
 }
 .SkillsContainer {
@@ -390,7 +392,7 @@ h3{
         "Heading"
         "SkillsWrapper"
         "footer" ;
-    min-height: 100vh;
+    min-height: 99vh;
     max-height: 100vh;
 }
 .skillCard img{
@@ -408,7 +410,7 @@ h3{
         "Heading"
         "EdExWrapper"
         "footer" ;
-    min-height: 100vh;
+    min-height: 99vh;
     max-height: 100vh;
 }
 
@@ -518,14 +520,6 @@ h5{
     font-size: 12pt;
     padding-bottom: 12pt;
 }
-.LoginContainer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-}
 
 .container {
     background-color: var(--colour);
@@ -535,13 +529,6 @@ h5{
     text-align: center;
     color: black;
 
-}
-
-.LoginContainer h3 {
-    margin-top: 0;
-    margin-bottom: 2pt;
-    font-size: 36pt;
-    font-weight: 600;
 }
 
 #title, #description{
