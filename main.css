@@ -375,8 +375,11 @@ h3{
 }
 .Heading{
     grid-area: Heading;
-    margin-top: 100pt;
+    margin-top: 50pt;
     margin-bottom: 10pt;
+}
+.Heading .recursive{
+    color: var(--colour);
 }
 .SkillsContainer {
     display: grid;
@@ -508,7 +511,7 @@ h3{
     font-weight: 800;
     padding-bottom: 8pt;
     color: var(--colour);
-    text-shadow: 0 1pt var(--colourDarker);
+    text-shadow: 0 1.2pt black;
 }
 h5{
     letter-spacing: 0.5pt;
