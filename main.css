@@ -115,7 +115,7 @@ h2{
 
 .miniAboutMe .AboutDiv p {
     width: 0;
-    animation: typing 8s steps(80), blink .5s;
+    animation: typing 5s steps(80), blink .5s;
     white-space: nowrap;
     overflow: hidden;
     border-right: 0.2rem solid;
@@ -536,13 +536,15 @@ h3{
     width: 33rem;
 }
 .ColumnPortfolio:hover,.ColumnPortfolio2:hover,.ColumnPortfolio3:hover{
-    scale: 110%;
+    transform: scale(1.1);
     z-index: 2;
     border-radius: 1rem;
     background-color: transparent;
     color: var(--colour);
 }
-
+.ColumnPortfolio, .ColumnPortfolio2, .ColumnPortfolio3 {
+    transition: transform 0.5s;
+}
 .PortfolioCard{
     display: table-cell;
     vertical-align: middle;
