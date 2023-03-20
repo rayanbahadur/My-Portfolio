@@ -15,11 +15,11 @@ body{
     font-family: 'Outfit', sans-serif;
     font-weight: 500;
     color: white;
-    font-size: 15pt;
+    font-size: 1.25rem;
 }
 
 h2{
-    font-size: 80pt;
+    font-size: 6.67rem;
     font-family: 'Outfit', sans-serif;
     font-weight: 800;
     text-align: center;
@@ -27,10 +27,10 @@ h2{
 /* ------------------------ Navigation Bar ------------------------*/
 .nav{
     font-weight: 300;
-    font-size: 20pt;
+    font-size: 1.67rem;
     display: flex;
     justify-content: space-around;
-    padding-top: 30pt;
+    padding-top: 2.5rem;
 }
 
 .navList {
@@ -38,7 +38,7 @@ h2{
 }
 
 .navList  .logo{
-    height: 33px;
+    height: 2.0625rem;
 }
 .nav a{
     color: white;
@@ -53,7 +53,7 @@ h2{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap:25pt;
+    gap:2.033rem;
 }
 
 .navList .listItem {
@@ -86,7 +86,7 @@ h2{
 
     .navList .listItem, .listItemC {
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 0.625rem;
     }
 }
 @media screen and (max-width: 768px) {
@@ -98,36 +98,32 @@ h2{
     .navList ul {
         flex-direction: column;
         align-items: center;
-        gap: 10pt;
+        gap: 0.8333rem;
     }
 
     .navList .listItem {
         display: block;
-        margin-bottom: 10px;
+        margin-bottom: 0.625rem;
     }
 }
 /* ------------------------ Main Text For Home ------------------------*/
 .miniAboutMe p{
     font-family: 'Space Mono', monospace;
-    margin-top: 15pt;
+    margin-top: 1.25rem;
     text-align: center;
 }
 
 .miniAboutMe .AboutDiv p {
     width: 0;
-    animation: typing 12s steps(80), blink .5s, infinite alternate;
+    animation: typing 8s steps(80), blink .5s;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 2pt solid;
-    animation-iteration-count: infinite;
+    border-right: 0.2rem solid;
 }
 
 @keyframes typing {
-    50% {
+    100% {
         width: 80ch;
-    }
-    0% {
-        width: 0;
     }
 }
 
@@ -144,7 +140,7 @@ h2{
 h1{
     font-family: 'Outfit', sans-serif;
     font-weight: 800;
-    font-size: 112pt;
+    font-size: 9.333rem;
 }
 .miniAboutMe h1{
     text-align: center;
@@ -154,7 +150,7 @@ h1{
 .HomeContainer {
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: min-content 60% 30% 5%;
+    grid-template-rows: min-content 60% 25% 5%;
     grid-template-areas:
         "header"
         "miniAboutMe"
@@ -181,7 +177,7 @@ h1{
 footer{
     grid-area: footer;
     font-weight: 400;
-    font-size: 12pt;
+    font-size: 1rem;
     color: white;
     text-align: center;
     align-items: center;
@@ -195,14 +191,14 @@ footer{
     color: var(--colour);
     font-family: 'Outfit', sans-serif;
     font-weight: 800;
-    font-size: 15pt;
+    font-size: 1.25rem;
     letter-spacing: 5pt;
-    padding: 15pt 53pt;
+    padding: 1.25rem 4.42rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
-    border-radius: 50pt;
+    border-radius: 4.167rem;
 }
 .button:hover{
     background-color: var(--colour);
@@ -229,9 +225,9 @@ footer{
 }
 
 .b2 a{
-    padding-left: 5pt;
-    padding-right: 5pt;
-    padding-top: 12pt;
+    padding-left: 0.417rem;
+    padding-right: 0.417rem;
+    padding-top: 1rem;
 }
 /* ------------------------ Main Text For About Me Page ------------------------*/
 .AboutMeContainer h2{
@@ -239,12 +235,12 @@ footer{
 }
 .AboutMe{
     text-align: justify;
-    padding-right: 50pt;
+    padding-right: 4.167rem;
 }
 .AboutMe p{
     font-weight: 300;
-    padding-bottom: 16pt;
-    line-height: 18pt;
+    padding-bottom: 1.333rem;
+    line-height: 1.5rem;
 }
 .AboutMe #blue{
     color: var(--colour);
@@ -341,9 +337,9 @@ footer{
 
 .container {
     background-color: var(--colour);
-    border-radius: 5pt;
-    padding: 20pt;
-    width: 300pt;
+    border-radius: 0.417rem;
+    padding: 1.667rem;
+    width: 25rem;
     text-align: center;
     color: black;
 
@@ -351,36 +347,36 @@ footer{
 
 .LoginContainer h3 {
     margin-top: 0;
-    margin-bottom: 2pt;
-    font-size: 36pt;
+    margin-bottom: 0.167rem;
+    font-size: 3rem;
     font-weight: 600;
 }
 
 #email, #password{
     font-family: 'Space Mono', monospace;
     width: 50%;
-    padding: 12pt 20pt;
-    margin: 8pt 0;
+    padding: 1rem 1.667rem;
+    margin: 0.667rem 0;
     display: inline-block;
-    border: 1pt solid #280709;
-    border-radius: 12pt;
+    border: 0.083rem solid #280709;
+    border-radius: 1rem;
     box-sizing: border-box;
 }
 
 .LoginContainer button[type="submit"] {
     background-color: transparent;
-    padding: 5pt 20pt;
+    padding: 0.417rem 1.667rem;
     cursor: pointer;
     border: thick solid black;
     color: black;
     font-family: 'Outfit', sans-serif;
     font-weight: 800;
-    font-size: 12pt;
-    letter-spacing: 1pt;
+    font-size: 1rem;
+    letter-spacing: 0.083rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    border-radius: 50pt;
+    border-radius: 4.167rem;
 }
 .LoginContainer button[type="submit"]:hover {
     background-color: black;
@@ -392,33 +388,33 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10pt;
+    gap: 0.833rem;
     align-items: center;
-    margin-bottom: 100pt;
+    margin-bottom: 8.33rem;
 
 }
 .Column{
     background-color: #262523;
-    border-radius: 8pt;
+    border-radius: 0.667rem;
     text-align: center;
-    padding: 60pt 40pt;
+    padding: 5rem 3.33rem;
 }
 #badge,#badge2{
-    padding: 60pt 46pt;
+    padding: 5rem 3.83rem;
 }
 .skillCard{
     scale: 1.25;
 }
 h3{
     font-weight: 500;
-    font-size: 16pt;
-    letter-spacing: 1pt;
-    padding-top: 10pt;
+    font-size: 1.33rem;
+    letter-spacing: 0.083rem;
+    padding-top: 0.833rem;
 }
 .Heading{
     grid-area: Heading;
-    margin-top: 50pt;
-    margin-bottom: 10pt;
+    margin-top: 4.167rem;
+    margin-bottom: 0.833rem;
 }
 .red{
     color: var(--colour);
@@ -436,7 +432,7 @@ h3{
     max-height: 100vh;
 }
 .skillCard img{
-    height: 100pt;
+    height: 8.333rem;
     width: auto;
 }
 
@@ -459,30 +455,30 @@ h3{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10pt;
+    gap: 0.833rem;
     align-items: center;
-    margin-bottom: 100pt;
+    margin-bottom: 8.333rem;
 
 }
 
 .ColumnEdEx,.ColumnEdEx2{
     background-color: #262523;
-    border-radius: 12pt;
+    border-radius: 1rem;
     text-align: center;
-    padding: 30pt 40pt;
-    width: 430pt;
-    max-width:430pt;
-    height: 355pt;
-    max-height: 355pt;
+    padding: 2.5rem 3.333rem;
+    width: 35.833rem;
+    max-width: 35.833rem;
+    height: 29.583rem;
+    max-height: 29.583rem;
     display: table;
 }
 .ColumnEdEx:hover,.ColumnEdEx2:hover{
     background-color: transparent;
     border-color: var(--colour);
     border-style: solid;
-    border-width: 10pt;
-    border-radius: 12pt;
-    padding: 20pt 30pt;
+    border-width: 0.833rem;
+    border-radius: 1rem;
+    padding: 1.667rem 2.5rem;
 }
 
 .EdExCard{
@@ -490,14 +486,14 @@ h3{
     vertical-align: middle;
 }
 .EdExCard li{
-    padding-top: 5pt;
+    padding-top: 0.417rem;
 }
 .EdExCard .subheading,.EdExCard .subheading1{
     font-weight: 800;
     padding-top: 0;
 }
 .EdExCard .subheading{
-    padding-top: 15pt;
+    padding-top: 1.25rem;
 }
 /* ------------------------ Portfolio Page ------------------------*/
 .PortfolioContainer {
@@ -511,6 +507,7 @@ h3{
         "footer" ;
     min-height: 99vh;
     max-height: 100vh;
+    overflow-x: hidden;
 }
 
 .PortfolioWrapper{
@@ -518,54 +515,56 @@ h3{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10pt;
+    gap: 0.833rem;
     align-items: center;
+    padding-bottom: 1.13rem;
 }
 .ColumnPortfolio img, .ColumnPortfolio2 img, .ColumnPortfolio3 img{
     width: 100%;
-    border-radius: 10pt;
+    border-radius: 0.833rem;
 }
 
 .ColumnPortfolio, .ColumnPortfolio2, .ColumnPortfolio3{
     background-color: black;
-    border-radius: 12pt;
+    border-radius: 1rem;
     text-align: center;
-    width: 500pt;
+    width: 30rem;
     display: table;
     position: relative;
 }
 .ColumnPortfolio2{
-    width: 650pt;
+    width: 33rem;
 }
 .ColumnPortfolio:hover,.ColumnPortfolio2:hover,.ColumnPortfolio3:hover{
     scale: 110%;
     z-index: 2;
-    border-radius: 12pt;
+    border-radius: 1rem;
     background-color: transparent;
     color: var(--colour);
 }
+
 .PortfolioCard{
     display: table-cell;
     vertical-align: middle;
 }
 .PortfolioCard li{
-    padding-top: 5pt;
+    padding-top: 0.4167rem;
 }
 .PortfolioCard .subheading,.PortfolioCard .subheading1{
     font-weight: 800;
     padding-top: 0;
 }
 .PortfolioCard .subheading{
-    padding-top: 15pt;
+    padding-top: 1.25rem;
 }
 
 .ColumnPortfolio .number,.ColumnPortfolio2 .number,.ColumnPortfolio3 .number{
     position: absolute;
     top: 0;
     left: 0;
-    padding-left: 10pt;
-    padding-top: 10pt;
-    font-size: 42pt;
+    padding-left: 0.833rem;
+    padding-top: 0.833rem;
+    font-size: 3.5rem;
     font-family: 'Space Mono', monospace;
     font-weight: 700;
     font-style: italic;
@@ -573,6 +572,8 @@ h3{
 }
 .PortfolioContainer h3{
     font-family: 'Space Mono', monospace;
+    font-size: 100%;
+    letter-spacing: -0.02rem;
 }
 /* ------------------------ Blog Page ------------------------*/
 .BlogContainer{
@@ -589,26 +590,26 @@ h3{
 
 .card, .card1{
     background-color: #262523;
-    padding: 20pt;
-    margin-top: 20pt;
+    padding: 1.667rem;
+    margin-top: 1.667rem;
     box-sizing: border-box;
-    border-radius: 8pt;
+    border-radius: 0.667rem;
 }
 
 .mainBlog {
     float: left;
     width: 70%;
     box-sizing: border-box;
-    padding-left: 20pt;
+    padding-left: 1.667rem;
 }
 
 /* Right column */
 .blogAside {
     float: left;
     width: 30%;
-    padding-left: 20pt;
+    padding-left: 1.667rem;
     box-sizing: border-box;
-    padding-right: 20pt;
+    padding-right: 1.667rem;
     text-align: center;
     justify-content: center;
 }
@@ -620,27 +621,27 @@ h3{
 }
 .blogImg img{
     width: 50%;
-    padding: 20pt;
+    padding: 1.667rem;
     box-sizing: border-box;
-    border-radius: 12pt;
+    border-radius: 1rem;
 }
 .BlogContainer h3{
     font-weight: 800;
-    padding-bottom: 8pt;
+    padding-bottom: 0.667rem;
     color: var(--colour);
-    text-shadow: 0 1.2pt black;
+    text-shadow: 0 0.1rem black;
 }
 h5{
-    letter-spacing: 0.5pt;
-    font-size: 12pt;
-    padding-bottom: 12pt;
+    letter-spacing: 0.0417rem;
+    font-size: 1rem;
+    padding-bottom: 1rem;
 }
 
 .container {
     background-color: var(--colour);
-    border-radius: 5pt;
-    padding: 20pt;
-    width: 300pt;
+    border-radius: 0.417rem;
+    padding: 1.667rem;
+    width: 25rem;
     text-align: center;
     color: black;
 
@@ -649,37 +650,44 @@ h5{
 #title, #description{
     font-family: 'Space Mono', monospace;
     width: 100%;
-    padding: 12pt 20pt;
-    margin: 8pt 0;
+    padding: 1rem 1.667rem;
+    margin: 0.667rem 0;
     display: inline-block;
-    border: 1pt solid var(--colourDarker);
-    border-radius: 8pt;
+    border: 0.083rem solid var(--colourDarker);
+    border-radius: 0.667rem;
     box-sizing: border-box;
 }
 
 .BlogContainer button[type="submit"], .BlogContainer button[type="reset"] {
     background-color: transparent;
-    padding: 5pt 20pt;
+    padding: 0.417rem 1.667rem;
     cursor: pointer;
     border: thick solid white;
     color: white;
     font-family: 'Outfit', sans-serif;
     font-weight: 800;
-    font-size: 12pt;
-    letter-spacing: 1pt;
+    font-size: 1rem;
+    letter-spacing: 0.083rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    border-radius: 8pt;
-    gap: 8pt;
+    border-radius: 0.667rem;
+    gap: 0.667rem;
 }
 .BlogContainer button[type="submit"]{
-    margin-right: 10pt;
+    margin-right: 0.833rem;
+    border: thick solid darkgreen;
+    color: green;
 }
 .BlogContainer button[type="reset"]{
-    margin-left: 10pt;
+    margin-left: 0.833rem;
 }
-.BlogContainer button[type="submit"]:hover, .BlogContainer button[type="reset"]:hover{
+.BlogContainer button[type="submit"]:hover{
+    background-color: darkgreen;
+    color: black;
+    border-color: black;
+}
+.BlogContainer button[type="reset"]:hover{
     background-color: var(--colour);
     color: black;
     border-color: black;
@@ -688,9 +696,9 @@ h5{
     text-align: center;
 }
 .card .b2{
-    gap: 10pt;
+    gap: 0.833rem;
 }
 .card .b2 a{
     scale: 1.5;
-    padding-top: 12pt;
+    padding-top: 1rem;
 }
