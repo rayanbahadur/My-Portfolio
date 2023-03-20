@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;500;800&family=Space+Mono&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;500;800&family=Space+Mono:ital,wght@0,400;1,700&display=swap');
 :root {
     --colour: #9d0208;
     --colourDarker: #6a040f;
 }
 #home, .bigContainerLogin {
-    background-image: url("image/bg.png");
+    background-image: url("image/bg.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -336,6 +335,9 @@ footer{
     margin: 0;
     padding: 0;
 }
+.bigContainerLogin{
+    height: 100vh;
+}
 
 .container {
     background-color: var(--colour);
@@ -380,6 +382,10 @@ footer{
     display: inline-block;
     border-radius: 50pt;
 }
+.LoginContainer button[type="submit"]:hover {
+    background-color: black;
+    color: var(--colour);
+}
 /* ------------------------ Skills Page ------------------------*/
 .SkillsWrapper{
     grid-area: SkillsWrapper;
@@ -414,7 +420,7 @@ h3{
     margin-top: 50pt;
     margin-bottom: 10pt;
 }
-.Heading .red{
+.red{
     color: var(--colour);
 }
 .SkillsContainer {
@@ -492,6 +498,81 @@ h3{
 }
 .EdExCard .subheading{
     padding-top: 15pt;
+}
+/* ------------------------ Portfolio Page ------------------------*/
+.PortfolioContainer {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: min-content min-content auto min-content;
+    grid-template-areas:
+        "header"
+        "Heading"
+        "PortfolioWrapper"
+        "footer" ;
+    min-height: 99vh;
+    max-height: 100vh;
+}
+
+.PortfolioWrapper{
+    grid-area: PortfolioWrapper;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10pt;
+    align-items: center;
+}
+.ColumnPortfolio img, .ColumnPortfolio2 img, .ColumnPortfolio3 img{
+    width: 100%;
+    border-radius: 10pt;
+}
+
+.ColumnPortfolio, .ColumnPortfolio2, .ColumnPortfolio3{
+    background-color: black;
+    border-radius: 12pt;
+    text-align: center;
+    width: 500pt;
+    display: table;
+    position: relative;
+}
+.ColumnPortfolio2{
+    width: 650pt;
+}
+.ColumnPortfolio:hover,.ColumnPortfolio2:hover,.ColumnPortfolio3:hover{
+    scale: 110%;
+    z-index: 2;
+    border-radius: 12pt;
+    background-color: transparent;
+    color: var(--colour);
+}
+.PortfolioCard{
+    display: table-cell;
+    vertical-align: middle;
+}
+.PortfolioCard li{
+    padding-top: 5pt;
+}
+.PortfolioCard .subheading,.PortfolioCard .subheading1{
+    font-weight: 800;
+    padding-top: 0;
+}
+.PortfolioCard .subheading{
+    padding-top: 15pt;
+}
+
+.ColumnPortfolio .number,.ColumnPortfolio2 .number,.ColumnPortfolio3 .number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 10pt;
+    padding-top: 10pt;
+    font-size: 42pt;
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-style: italic;
+
+}
+.PortfolioContainer h3{
+    font-family: 'Space Mono', monospace;
 }
 /* ------------------------ Blog Page ------------------------*/
 .BlogContainer{
