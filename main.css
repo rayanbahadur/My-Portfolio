@@ -181,8 +181,8 @@ footer{
     color: white;
     text-align: center;
     align-items: center;
-    padding-top: 10pt;
-    padding-bottom: 10pt;
+    padding-top: 0.833rem;
+    padding-bottom: 0.833rem;
 }
 /* ------------------------ Button Section ------------------------*/
 .button{
@@ -192,7 +192,7 @@ footer{
     font-family: 'Outfit', sans-serif;
     font-weight: 800;
     font-size: 1.25rem;
-    letter-spacing: 5pt;
+    letter-spacing: 0.417rem;
     padding: 1.25rem 4.42rem;
     text-align: center;
     text-decoration: none;
