@@ -302,26 +302,7 @@ footer{
     width: 100%;
 }
 
-@media screen and (max-width: 1307px) {
-    .AboutMeWrapper{
-        flex-direction: column;
-        align-items: center;
-    }
-    .AboutMeContainer h2{
-        text-align: center;
-    }
-    .AboutMeContainer {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: min-content min-content min-content;
-        grid-template-areas:
-        "header"
-        "AboutMeWrapper"
-        "footer" ;
-        min-height: 99vh;
-        max-height: 100vh;
-    }
-}
+
 /* ------------------------ Login Page ------------------------*/
 .LoginContainer {
     display: flex;
@@ -703,4 +684,48 @@ h5{
 .card .b2 a{
     scale: 1.5;
     padding-top: 1rem;
+}
+
+/* ------------------------ Media Queries ------------------------*/
+
+
+@media screen and (max-width: 1307px) {
+    .AboutMeWrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .AboutMeContainer h2{
+        text-align: center;
+    }
+    .AboutMeContainer {
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: min-content min-content min-content;
+        grid-template-areas:
+        "header"
+        "AboutMeWrapper"
+        "footer" ;
+        min-height: 99vh;
+        max-height: 100vh;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    .miniAboutMe .AboutDiv p {
+        width: auto;
+        animation: none;
+        white-space: normal;
+        overflow: visible;
+        border-right: none;
+    }
+    .miniAboutMe h1, .miniAboutMe p {
+    display: block;
+    width: 100%;
+    }
+}
+
+@media screen and (max-width: 1306px) {
+    .AboutMe{
+        padding-right: 0;
+    }
 }
