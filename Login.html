@@ -29,6 +29,7 @@
         <div class="container">
             <h3>Login</h3>
             <form action="login.php" method="post">
+                <?php include('errors.php'); ?>
                 <input type="email" id="email" name="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><br>
                 <input type="password" id="password" name="password" placeholder="Password" minlength="8" maxlength="127" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required title="At least 1 Number, an uppercase letter,  lowercase letter and a minimum of 8 characters"><br>
                 <button type="submit">Submit</button>
