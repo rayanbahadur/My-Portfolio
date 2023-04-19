@@ -729,6 +729,11 @@ h5{
         padding-right: 0;
     }
 }
-.error {
-    border-color: red;
+
+.card1 .success{
+    background-color: #31611a;
+    margin-top: 1.667rem;
+    box-sizing: border-box;
+    border-radius: 0.667rem;
+    padding: 1rem 1rem 0.1rem;
 }

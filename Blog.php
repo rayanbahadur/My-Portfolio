@@ -1,4 +1,6 @@
-
+<?php
+    include "addPost.php"
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,9 +19,9 @@
                 <div class="navList">
 
                     <ul>
-                        <a href="index.html"><img class="logo" src="image/smileyBlue.png" alt="smiley"></a>
+                        <a href="index.php"><img class="logo" src="image/smileyBlue.png" alt="smiley"></a>
                         <li class="listItem"><p>Rayan Bahadur</p></li>
-                        <li class="listItem"><a href="index.html">Home</a></li>
+                        <li class="listItem"><a href="index.php">Home</a></li>
                         <li class="listItem"><a href="AboutMe.html">About</a></li>
                         <li class="listItem"><a href="My%20Skills.html">Skills</a></li>
                         <li class="listItem"><a href="Education&Experience.html">Education & Experience</a></li>
@@ -36,21 +38,13 @@
 
         <div class="blogRow">
             <article class="mainBlog">
-                <section class="card">
-                    <h3>TITLE HEADING</h3>
-                    <h5>Title description, Mar 15 2023 12:59</h5>
-                    <p>Lorem ipsum dolor sit amet</p>
-                </section>
-                <section class="card">
-                    <h3>TITLE HEADING</h3>
-                    <h5>Title description, Mar 10 2023 6:32</h5>
-                    <p>Phasellus suscipit arcu malesuada volutpat lacinia.</p>
-                </section>
-                <section class="card">
-                    <h3>TITLE HEADING</h3>
-                    <h5>Title description, Feb 29 2023 18:00</h5>
-                    <p>Nulla a lorem urna. Phasellus tellus quam, lobortis nec diam cursus</p>
-                </section>
+                <?php foreach ($query as $q){?>
+                    <section class="card">
+                        <h3><?php echo $q['title'];?></h3>
+                        <h5><?php echo $q['date'];?></h5>
+                        <p><?php echo $q['description'];?></p>
+                    </section>
+                <?php }?>
             </article>
             <aside class="blogAside">
                 <?php
@@ -58,6 +52,13 @@
                 if(isset($_SESSION['email'])) {// if a session is active
                     ?>
                     <div class="card1">
+                        <?php if(isset($_REQUEST['info'])){?>
+                            <?php if ($_REQUEST['info'] == "added"){?>
+                                <div class="success" role="alert">
+                                    <h5>Post has been added successfully</h5>
+                                </div>
+                            <?php } ?>
+                        <?php } ?>
                         <h3>Add Post</h3>
                         <form action="addPost.php" method="get">
                             <input type="text" id="title" name="title" placeholder="Title" required minlength="3" maxlength="255"><br>
