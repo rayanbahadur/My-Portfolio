@@ -1,4 +1,5 @@
 <?php
+    session_start();
     $email = $_POST['email'];
     $password = $_POST['password'];
     $con = new mysqli("localhost","root","","logindetails");
@@ -12,7 +13,10 @@
         if ($stmt_result->num_rows >0){
             $data = $stmt_result->fetch_assoc();
             if ($data['password'] === $password){
-                header("Location: Blog.html");
+                $_SESSION['email'] = $email;
+                $_SESSION['logged_in'] = true;
+                header("Location: Blog.php?");
+                exit();
             }
         }
         else{
