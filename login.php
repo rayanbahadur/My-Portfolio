@@ -20,7 +20,11 @@
             }
         }
         else{
-            echo "<p> Invalid Email or Password</p>";
+            echo "<script>
+                alert('Invalid Email or Password');
+                window.location.href = 'login.html';
+                </script>";
+
         }
     }
     ?>

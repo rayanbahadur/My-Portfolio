@@ -3,14 +3,29 @@ const descriptionInput = document.getElementById("description");
 const postButton = document.getElementById("postBtn");
 const clearButton = document.getElementById("clearBtn");
 
-postButton.addEventListener("click", function (event) {
-    event.preventDefault(); // prevent default form submission behavior
+postButton.addEventListener('click', (event) => {
+
     const title = titleInput.value;
     const description = descriptionInput.value;
-    // do something with title and description
+    if (title.trim() === '' || description.trim() === '') {
+        event.preventDefault();
+    }
+    document.getElementById("addPost").submit();
 });
 
+// Clear the form using the clear.js script
 clearButton.addEventListener("click", function () {
-    titleInput.value = "";
-    descriptionInput.value = "";
+    if (titleInput.value !== "") {
+        titleInput.value = "";
+    }
+    if (descriptionInput.value !== "") {
+        descriptionInput.value = "";
+    }
+});
+$(document).ready(function() {
+
+    $('#clearBtn').click(function() {
+        $('#title').prop('required', false);
+        $('#description').prop('required', false);
+    });
 });

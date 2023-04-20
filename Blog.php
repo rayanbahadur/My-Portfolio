@@ -26,7 +26,7 @@
                         <li class="listItem"><a href="My%20Skills.html">Skills</a></li>
                         <li class="listItem"><a href="Education&Experience.html">Education & Experience</a></li>
                         <li class="listItem"><a href="Portfolio.html">Portfolio</a></li>
-                        <li class="listItemC"><a href="#">Blog</a></li>
+                        <li class="listItemC"><a href="Blog.php">Blog</a></li>
                     </ul>
                 </div>
             </nav>
@@ -38,11 +38,11 @@
 
         <div class="blogRow">
             <article class="mainBlog">
-                <?php foreach ($query as $q){?>
+                <?php foreach ($posts as $post) {?>
                     <section class="card">
-                        <h3><?php echo $q['title'];?></h3>
-                        <h5><?php echo $q['date'];?></h5>
-                        <p><?php echo $q['description'];?></p>
+                        <h3><?php echo $post['title'];?></h3>
+                        <h5><?php echo date('d/m/y H:i', strtotime($post['date']));?></h5>
+                        <p><?php echo $post['description'];?></p>
                     </section>
                 <?php }?>
             </article>
@@ -60,18 +60,24 @@
                             <?php } ?>
                         <?php } ?>
                         <h3>Add Post</h3>
-                        <form action="addPost.php" method="get">
-                            <input type="text" id="title" name="title" placeholder="Title" required minlength="3" maxlength="255"><br>
+                        <form method="get" id="addPost">
+                            <input type="text" id="title" name="title" placeholder="Title" minlength="3" maxlength="255"><br>
 
-                            <textarea id="description" name="description" placeholder="Description" required minlength="10" maxlength="2000"></textarea><br>
+                            <textarea id="description" name="description" placeholder="Description" minlength="10" maxlength="2000"></textarea><br>
 
-                            <button id="postBtn" name="postBtn">Post</button>
-                            <button id="clearBtn">Clear</button>
+                            <button id="postBtn" name="postBtn" type="submit" action="addPost.php">Post</button>
+                            <button id="clearBtn" name="clearBtn" type="reset">Clear</button>
                         </form>
+                    </div>
+                    <script src="clear.js"></script>
+                <?php
+                }else{?>
+                    <div class="login" role="alert">
+                        <a href="login.html"><h5>Please Login to Add a Post</h5></a>
                     </div>
                 <?php
                 }?>
-                <script src="clear.js"></script>
+
 
                 <div class="card">
                     <h3>About Me</h3>

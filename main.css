@@ -664,6 +664,7 @@ h5{
 }
 .BlogContainer #clearBtn{
     margin-left: 0.833rem;
+    padding: 0.417rem 1.48rem;
 }
 .BlogContainer #postBtn:hover{
     background-color: darkgreen;
@@ -730,10 +731,35 @@ h5{
     }
 }
 
-.card1 .success{
+.card1 .success,.blogAside .login{
     background-color: #31611a;
     margin-top: 1.667rem;
     box-sizing: border-box;
     border-radius: 0.667rem;
     padding: 1rem 1rem 0.1rem;
+}
+.blogAside .login{
+    background-color: var(--colourDarker);
+    text-align: center;
+}
+.blogAside .login:hover{
+    background-color: transparent;
+    cursor: pointer;
+    border: thick solid var(--colourDarker);
+}
+.blogAside .login a{
+    text-decoration: none;
+    color: white;
+}
+@media screen and (max-width: 1164px){
+    .BlogContainer #postBtn, .BlogContainer #clearBtn {
+    }
+    .BlogContainer #postBtn{
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
+    }
+    .BlogContainer #clearBtn{
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
+    }
 }
