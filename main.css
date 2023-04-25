@@ -43,6 +43,7 @@ h2{
 .nav a{
     color: white;
     text-decoration: none;
+    transition: 0.5s ease;
 }
 
 .nav a:hover{
@@ -199,6 +200,7 @@ footer{
     display: inline-block;
     cursor: pointer;
     border-radius: 4.167rem;
+    transition: 0.5s ease;
 }
 .button:hover{
     background-color: var(--colour);
@@ -358,6 +360,7 @@ footer{
     text-decoration: none;
     display: inline-block;
     border-radius: 4.167rem;
+    transition: 0.5s ease;
 }
 .LoginContainer button[type="submit"]:hover {
     background-color: black;
@@ -452,6 +455,7 @@ h3{
     height: 29.583rem;
     max-height: 29.583rem;
     display: table;
+    transition: 0.5s ease;
 }
 .ColumnEdEx:hover,.ColumnEdEx2:hover{
     background-color: transparent;
@@ -512,6 +516,7 @@ h3{
     width: 30rem;
     display: table;
     position: relative;
+    transition: 0.5s ease;
 }
 .ColumnPortfolio2{
     width: 33rem;
@@ -615,9 +620,9 @@ h3{
     text-shadow: 0 0.1rem black;
 }
 h5{
+    font-family: 'Outfit', sans-serif;
     letter-spacing: 0.0417rem;
     font-size: 1rem;
-    padding-bottom: 1rem;
 }
 
 .container {
@@ -661,10 +666,12 @@ h5{
     margin-right: 0.833rem;
     border: thick solid darkgreen;
     color: green;
+    transition: 0.5s ease;
 }
 .BlogContainer #clearBtn{
     margin-left: 0.833rem;
     padding: 0.417rem 1.48rem;
+    transition: 0.5s ease;
 }
 .BlogContainer #postBtn:hover{
     background-color: darkgreen;
@@ -736,16 +743,19 @@ h5{
     margin-top: 1.667rem;
     box-sizing: border-box;
     border-radius: 0.667rem;
-    padding: 1rem 1rem 0.1rem;
+    padding: 0.8rem 1rem;
+    align-items: center;
+    justify-content: center;
+
 }
-.blogAside .login{
-    background-color: var(--colourDarker);
-    text-align: center;
+.blogAside .login {
+    background-color: var(--colour);
+    transition: 0.5s ease;
+    display: flex;
 }
 .blogAside .login:hover{
-    background-color: transparent;
     cursor: pointer;
-    border: thick solid var(--colourDarker);
+    background-color: var(--colourDarker);
 }
 .blogAside .login a{
     text-decoration: none;
@@ -753,13 +763,78 @@ h5{
 }
 @media screen and (max-width: 1164px){
     .BlogContainer #postBtn, .BlogContainer #clearBtn {
-    }
-    .BlogContainer #postBtn{
         margin-left: 0.3rem;
         margin-right: 0.3rem;
     }
-    .BlogContainer #clearBtn{
-        margin-left: 0.3rem;
-        margin-right: 0.3rem;
-    }
+}
+.dropdownMenu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+.dropdownMenu button{
+    border: 0;
+    background: var(--colour);
+    color: white;
+    margin-top: 1.667rem;
+    box-sizing: border-box;
+    border-radius: 0.667rem;
+    padding: 0.8rem 1rem;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.dropdownMenu button:hover, .dropdownMenu button:active{
+    background: var(--colourDarker);
+
+}
+.icon{
+    font-size: 1.25rem;
+    margin-right: 0.55rem;
+}
+.login .icon{
+    font-size: 1.4rem;
+    margin-right: 0.55rem;
+}
+.dropdownMenu ul{
+    display: none;
+    align-items: flex-end;
+    background-color: #262523;
+    margin-top: 1.5rem;
+    border-radius: 0.667rem;
+    position: relative;
+}
+.dropdownMenu ul li a{
+    display: flex;
+    padding: 0.625rem 1.25rem;
+    height: 0.625rem;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.0623rem;
+    color: white;
+    text-decoration: none;
+    transition: 0.5s ease;
+}.dropdownMenu ul li a:hover{
+    color: var(--colour);
+}
+.dropdownMenu ul li:first-child a{
+    padding-top: 1.25rem;
+}
+.dropdownMenu ul li:last-child a{
+    padding-bottom: 1.25rem;
+}
+.dropdownMenu ul:before{
+    content: "";
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 16px solid;
+    border-color: transparent transparent #262523 transparent;
+}
+.dropdownMenu button.active + ul{
+    display: block;
 }

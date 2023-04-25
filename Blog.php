@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include "addPost.php"
 ?>
 <!DOCTYPE html>
@@ -8,6 +9,7 @@
     <link rel="icon" href="image/smileyBlueSquare.png">
     <link rel="stylesheet" href="reset.css" type="text/css"/>
     <link rel="stylesheet" href="main.css" type="text/css"/>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script src="clear.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Recursive Mind</title>
@@ -20,7 +22,6 @@
 
                     <ul>
                         <a href="index.php"><img class="logo" src="image/smileyBlue.png" alt="smiley"></a>
-                        <li class="listItem"><p>Rayan Bahadur</p></li>
                         <li class="listItem"><a href="index.php">Home</a></li>
                         <li class="listItem"><a href="AboutMe.html">About</a></li>
                         <li class="listItem"><a href="My%20Skills.html">Skills</a></li>
@@ -38,6 +39,25 @@
 
         <div class="blogRow">
             <article class="mainBlog">
+                <div class="dropdownMenu">
+                    <button><span class="icon"><ion-icon name="calendar"></ion-icon></span>
+                        <span class="text"><h5>Refine Search</h5></span></button>
+                        <ul>
+                            <li><a href="#January"><span class="text">January</span></a></li>
+                            <li><a href="#February"><span class="text">February</span></a></li>
+                            <li><a href="#March"><span class="text">March</span></a></li>
+                            <li><a href="#April"><span class="text">April</span></a></li>
+                            <li><a href="#May"><span class="text">May</span></a></li>
+                            <li><a href="#June"><span class="text">June</span></a></li>
+                            <li><a href="#July"><span class="text">July</span></a></li>
+                            <li><a href="#August"><span class="text">August</span></a></li>
+                            <li><a href="#September"><span class="text">September</span></a></li>
+                            <li><a href="#October"><span class="text">October</span></a></li>
+                            <li><a href="#November"><span class="text">November</span></a></li>
+                            <li><a href="#December"><span class="text">December</span></a></li>
+                        </ul>
+                </div>
+                <script type="text/javascript" src="blogMenu.js"></script>
                 <?php foreach ($posts as $post) {?>
                     <section class="card">
                         <h3><?php echo $post['title'];?></h3>
@@ -48,7 +68,6 @@
             </article>
             <aside class="blogAside">
                 <?php
-                session_start();
                 if(isset($_SESSION['email'])) {// if a session is active
                     ?>
                     <div class="card1">
@@ -61,19 +80,20 @@
                         <?php } ?>
                         <h3>Add Post</h3>
                         <form method="get" id="addPost">
-                            <input type="text" id="title" name="title" placeholder="Title" minlength="3" maxlength="255"><br>
+                            <input type="text" id="title" name="title" placeholder="Title" required minlength="3" maxlength="255"><br>
 
-                            <textarea id="description" name="description" placeholder="Description" minlength="10" maxlength="2000"></textarea><br>
+                            <textarea id="description" name="description" placeholder="Description" required minlength="10" maxlength="2000"></textarea><br>
 
                             <button id="postBtn" name="postBtn" type="submit" action="addPost.php">Post</button>
-                            <button id="clearBtn" name="clearBtn" type="reset">Clear</button>
+                            <button id="clearBtn" name="clearBtn">Clear</button>
                         </form>
+                        <script src="clear.js"></script>
                     </div>
-                    <script src="clear.js"></script>
                 <?php
                 }else{?>
                     <div class="login" role="alert">
-                        <a href="login.html"><h5>Please Login to Add a Post</h5></a>
+                        <span class="icon"><ion-icon name="log-in"></ion-icon></span>
+                        <span class="text"><a href="login.html"><h5>Please Login to Add a Post</h5></a></span>
                     </div>
                 <?php
                 }?>
