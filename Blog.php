@@ -40,24 +40,30 @@
         <div class="blogRow">
             <article class="mainBlog">
                 <div class="dropdownMenu">
-                    <button><span class="icon"><ion-icon name="calendar"></ion-icon></span>
+                    <button id="button1"><span class="icon"><ion-icon name="calendar"></ion-icon></span>
                         <span class="text"><h5>Refine Search</h5></span></button>
+                    <form action="" method="get">
                         <ul>
-                            <li><a href="#January"><span class="text">January</span></a></li>
-                            <li><a href="#February"><span class="text">February</span></a></li>
-                            <li><a href="#March"><span class="text">March</span></a></li>
-                            <li><a href="#April"><span class="text">April</span></a></li>
-                            <li><a href="#May"><span class="text">May</span></a></li>
-                            <li><a href="#June"><span class="text">June</span></a></li>
-                            <li><a href="#July"><span class="text">July</span></a></li>
-                            <li><a href="#August"><span class="text">August</span></a></li>
-                            <li><a href="#September"><span class="text">September</span></a></li>
-                            <li><a href="#October"><span class="text">October</span></a></li>
-                            <li><a href="#November"><span class="text">November</span></a></li>
-                            <li><a href="#December"><span class="text">December</span></a></li>
+                            <li><a href="#" data-month="01"><span class="text">January</span></a></li>
+                            <li><a href="#" data-month="02"><span class="text">February</span></a></li>
+                            <li><a href="#" data-month="03"><span class="text">March</span></a></li>
+                            <li><a href="#" data-month="04"><span class="text">April</span></a></li>
+                            <li><a href="#" data-month="05"><span class="text">May</span></a></li>
+                            <li><a href="#" data-month="06"><span class="text">June</span></a></li>
+                            <li><a href="#" data-month="07"><span class="text">July</span></a></li>
+                            <li><a href="#" data-month="08"><span class="text">August</span></a></li>
+                            <li><a href="#" data-month="09"><span class="text">September</span></a></li>
+                            <li><a href="#" data-month="10"><span class="text">October</span></a></li>
+                            <li><a href="#" data-month="11"><span class="text">November</span></a></li>
+                            <li><a href="#" data-month="12"><span class="text">December</span></a></li>
+                            <li>
+                                <button id="filterBtn" type="submit">Filter Posts</button>
+                                <input type="hidden" name="month" id="month">
+                            </li>
                         </ul>
+                        </form>
                 </div>
-                <script type="text/javascript" src="blogMenu.js"></script>
+                <script type="text/javascript" src="menuSelect.js"></script>
                 <?php foreach ($posts as $post) {?>
                     <section class="card">
                         <h3><?php echo $post['title'];?></h3>
@@ -91,10 +97,10 @@
                     </div>
                 <?php
                 }else{?>
-                    <div class="login" role="alert">
+                <a href="login.html"><div class="login" role="alert">
                         <span class="icon"><ion-icon name="log-in"></ion-icon></span>
-                        <span class="text"><a href="login.html"><h5>Please Login to Add a Post</h5></a></span>
-                    </div>
+                        <span class="text"><h5>Please Login to Add a Post</h5></span>
+                    </div></a>
                 <?php
                 }?>
 

@@ -757,7 +757,7 @@ h5{
     cursor: pointer;
     background-color: var(--colourDarker);
 }
-.blogAside .login a{
+.blogAside a{
     text-decoration: none;
     color: white;
 }
@@ -772,8 +772,9 @@ h5{
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
+    position: relative;
 }
-.dropdownMenu button{
+.dropdownMenu #button1{
     border: 0;
     background: var(--colour);
     color: white;
@@ -787,9 +788,8 @@ h5{
     cursor: pointer;
     transition: 0.5s ease;
 }
-.dropdownMenu button:hover, .dropdownMenu button:active{
+.dropdownMenu #button1:hover, .dropdownMenu #button1:active{
     background: var(--colourDarker);
-
 }
 .icon{
     font-size: 1.25rem;
@@ -805,7 +805,13 @@ h5{
     background-color: #262523;
     margin-top: 1.5rem;
     border-radius: 0.667rem;
-    position: relative;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    right:0;
+}
+.dropdownMenu:hover ul{
+    display: block;
 }
 .dropdownMenu ul li a{
     display: flex;
@@ -837,4 +843,19 @@ h5{
 }
 .dropdownMenu button.active + ul{
     display: block;
+    right:0;
+}
+.dropdownMenu ul li:last-child button {
+    background-color: var(--colourDarker);
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.25rem;
+    text-align: center;
+    text-decoration: none;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 0.667rem;
+    margin-top: 0.5rem;
 }
