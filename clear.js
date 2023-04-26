@@ -24,11 +24,4 @@ document.addEventListener('DOMContentLoaded', function() {
             descriptionInput.value = "";
         }
     });
-    $(document).ready(function () {
-
-        $('#clearBtn').click(function () {
-            $('#title').prop('required', false);
-            $('#description').prop('required', false);
-        });
-    });
 });

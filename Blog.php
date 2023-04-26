@@ -90,10 +90,11 @@
                         <form method="get" id="addPost">
                             <input type="text" id="title" name="title" placeholder="Title" minlength="3" maxlength="255" autocomplete="off"><br>
                             <textarea id="description" name="description" placeholder="Description" minlength="10" maxlength="2000" autocomplete="off"></textarea><br>
-
-                            <button id="previewBtn" name="previewBtn">Preview</button>
-                            <button id="postBtn" name="postBtn" type="submit" action="addPost.php">Post</button>
-                            <button id="clearBtn" name="clearBtn">Clear</button>
+                            <div id="buttonDiv">
+                                <button id="previewBtn" name="previewBtn">Preview</button>
+                                <button id="postBtn" name="postBtn" action="addPost.php">Post</button>
+                                <button id="clearBtn" name="clearBtn">Clear</button>
+                            </div>
                         </form>
                     </div>
                 <?php

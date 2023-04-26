@@ -645,10 +645,16 @@ h5{
     border-radius: 0.667rem;
     box-sizing: border-box;
 }
-
+.card1 #buttonDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.667rem;
+    flex-wrap: wrap;
+}
 .BlogContainer #postBtn, .BlogContainer #clearBtn, .BlogContainer #previewBtn {
     background-color: transparent;
-    padding: 0.417rem 1.667rem;
+    padding: 0.417rem 1.7rem;
     cursor: pointer;
     border: thick solid white;
     color: white;
@@ -660,19 +666,25 @@ h5{
     text-decoration: none;
     display: inline-block;
     border-radius: 0.667rem;
-    gap: 0.667rem;
+    flex-shrink: 0;
+}
+.BlogContainer #previewBtn{
+    padding: 0.417rem 1rem;
+    transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .BlogContainer #postBtn{
-    margin-left:0.833rem ;
-    margin-right: 0.833rem;
     border: thick solid darkgreen;
     color: green;
-    transition: 0.5s ease;
+    transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .BlogContainer #clearBtn{
-    margin-left: 0.833rem;
     padding: 0.417rem 1.48rem;
-    transition: 0.5s ease;
+    transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.BlogContainer #previewBtn:hover{
+    background-color: rebeccapurple;
+    color: black;
+    border-color: black;
 }
 .BlogContainer #postBtn:hover{
     background-color: darkgreen;
@@ -808,7 +820,7 @@ h5{
     border-radius: 0.667rem;
     position: absolute;
     z-index: 1;
-    top: 100%;
+    top: 88%;
     right:0;
 }
 .dropdownMenu:hover ul{
