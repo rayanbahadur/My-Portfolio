@@ -875,3 +875,13 @@ h5{
 .preview #title,.preview #description {
     display: none;
 }
+#editAlert{
+    color: rebeccapurple;
+    font-weight: bold;
+    font-style: italic;
+}
+#iconP{
+    color: rebeccapurple;
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
