@@ -25,8 +25,9 @@ if (isset($_REQUEST["postBtn"])){
         $title = $_REQUEST["title"];
         $description = $_REQUEST["description"];
 
-        $sql = "INSERT INTO post(ID, title, description, date) VALUES (NULL,'$title', '$description', current_timestamp())";
-        mysqli_query($con, $sql);
+    $stmt = $con->prepare("INSERT INTO post(ID, title, description, date) VALUES (NULL, ?, ?, current_timestamp())");
+    $stmt->bind_param("ss", $title, $description);
+    $stmt->execute();
 
         header("Location: Blog.php?info=added");
         exit();

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="reset.css" type="text/css"/>
     <link rel="stylesheet" href="main.css" type="text/css"/>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="preview.js"></script>
     <script src="clear.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Recursive Mind</title>
@@ -64,6 +65,7 @@
                         </form>
                 </div>
                 <script type="text/javascript" src="menuSelect.js"></script>
+                <section class="card" id="preview"></section>
                 <?php foreach ($posts as $post) {?>
                     <section class="card">
                         <h3><?php echo $post['title'];?></h3>
@@ -86,14 +88,13 @@
                         <?php } ?>
                         <h3>Add Post</h3>
                         <form method="get" id="addPost">
-                            <input type="text" id="title" name="title" placeholder="Title" required minlength="3" maxlength="255"><br>
+                            <input type="text" id="title" name="title" placeholder="Title" minlength="3" maxlength="255" autocomplete="off"><br>
+                            <textarea id="description" name="description" placeholder="Description" minlength="10" maxlength="2000" autocomplete="off"></textarea><br>
 
-                            <textarea id="description" name="description" placeholder="Description" required minlength="10" maxlength="2000"></textarea><br>
-
+                            <button id="previewBtn" name="previewBtn">Preview</button>
                             <button id="postBtn" name="postBtn" type="submit" action="addPost.php">Post</button>
                             <button id="clearBtn" name="clearBtn">Clear</button>
                         </form>
-                        <script src="clear.js"></script>
                     </div>
                 <?php
                 }else{?>

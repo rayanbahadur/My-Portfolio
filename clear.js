@@ -1,31 +1,34 @@
-const titleInput = document.getElementById("title");
-const descriptionInput = document.getElementById("description");
-const postButton = document.getElementById("postBtn");
-const clearButton = document.getElementById("clearBtn");
+document.addEventListener('DOMContentLoaded', function() {
 
-postButton.addEventListener('click', (event) => {
+    const titleInput = document.getElementById("title");
+    const descriptionInput = document.getElementById("description");
+    const postButton = document.getElementById("postBtn");
+    const clearButton = document.getElementById("clearBtn");
 
-    const title = titleInput.value;
-    const description = descriptionInput.value;
-    if (title.trim() === '' || description.trim() === '') {
-        event.preventDefault();
-    }
-    document.getElementById("addPost").submit();
-});
+    postButton.addEventListener('click', (event) => {
+
+        const title = titleInput.value;
+        const description = descriptionInput.value;
+        if (title.trim() === '' || description.trim() === '') {
+            event.preventDefault();
+        }
+        document.getElementById("addPost").submit();
+    });
 
 // Clear the form using the clear.js script
-clearButton.addEventListener("click", function () {
-    if (titleInput.value !== "") {
-        titleInput.value = "";
-    }
-    if (descriptionInput.value !== "") {
-        descriptionInput.value = "";
-    }
-});
-$(document).ready(function() {
+    clearButton.addEventListener("click", function () {
+        if (titleInput.value !== "") {
+            titleInput.value = "";
+        }
+        if (descriptionInput.value !== "") {
+            descriptionInput.value = "";
+        }
+    });
+    $(document).ready(function () {
 
-    $('#clearBtn').click(function() {
-        $('#title').prop('required', false);
-        $('#description').prop('required', false);
+        $('#clearBtn').click(function () {
+            $('#title').prop('required', false);
+            $('#description').prop('required', false);
+        });
     });
 });

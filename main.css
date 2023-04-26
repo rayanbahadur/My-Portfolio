@@ -646,7 +646,7 @@ h5{
     box-sizing: border-box;
 }
 
-.BlogContainer #postBtn, .BlogContainer #clearBtn {
+.BlogContainer #postBtn, .BlogContainer #clearBtn, .BlogContainer #previewBtn {
     background-color: transparent;
     padding: 0.417rem 1.667rem;
     cursor: pointer;
@@ -663,6 +663,7 @@ h5{
     gap: 0.667rem;
 }
 .BlogContainer #postBtn{
+    margin-left:0.833rem ;
     margin-right: 0.833rem;
     border: thick solid darkgreen;
     color: green;
