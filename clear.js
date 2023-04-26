@@ -11,8 +11,24 @@ document.addEventListener('DOMContentLoaded', function() {
         const description = descriptionInput.value;
         if (title.trim() === '' || description.trim() === '') {
             event.preventDefault();
+            if (title.trim() === '') {
+                titleInput.style.borderColor = "red";
+                titleInput.style.borderWidth = "2px";
+                if (description.trim() !== '') {
+                    descriptionInput.style.borderWidth = "0px";
+                }
+            }
+            if (description.trim() === '') {
+                descriptionInput.style.borderColor = "red";
+                descriptionInput.style.borderWidth = "2px";
+                if (title.trim() !== '') {
+                    titleInput.style.borderWidth = "0px";
+                }
+            }
         }
-        document.getElementById("addPost").submit();
+        else {
+            document.getElementById("addPost").submit();
+        }
     });
 
 // Clear the form using the clear.js script

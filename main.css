@@ -872,3 +872,6 @@ h5{
     border-radius: 0.667rem;
     margin-top: 0.5rem;
 }
+.preview #title,.preview #description {
+    display: none;
+}
