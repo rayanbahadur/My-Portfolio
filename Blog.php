@@ -88,8 +88,8 @@
                         <?php } ?>
                         <h3>Add Post</h3>
                         <form method="get" id="addPost" class="addPost">
-                            <input type="text" id="title" name="title" placeholder="Title" minlength="3" maxlength="255" autocomplete="off"><br>
-                            <textarea id="description" name="description" placeholder="Description" minlength="10" maxlength="2000" autocomplete="off"></textarea><br>
+                            <input type="text" id="title" name="title" placeholder="Title" required minlength="3" maxlength="255" autocomplete="off"><br>
+                            <textarea id="description" name="description" placeholder="Description" required minlength="10" maxlength="2000" autocomplete="off"></textarea><br>
                             <div id="buttonDiv">
                                 <button id="previewBtn" name="previewBtn">Preview</button>
                                 <button id="postBtn" name="postBtn" action="addPost.php">Post</button>

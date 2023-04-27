@@ -652,7 +652,7 @@ h5{
     gap: 0.667rem;
     flex-wrap: wrap;
 }
-.BlogContainer #postBtn, .BlogContainer #clearBtn, .BlogContainer #previewBtn {
+.BlogContainer #postBtn, .BlogContainer #clearBtn, .BlogContainer #previewBtn, #editBtn {
     background-color: transparent;
     padding: 0.417rem 1.7rem;
     cursor: pointer;
@@ -667,6 +667,9 @@ h5{
     display: inline-block;
     border-radius: 0.667rem;
     flex-shrink: 0;
+}
+#preview #postBtn, #preview #editBtn{
+    margin-top: 1.2rem;
 }
 .BlogContainer #previewBtn{
     padding: 0.417rem 1rem;
@@ -876,12 +879,19 @@ h5{
     display: none;
 }
 #editAlert{
-    color: rebeccapurple;
+    color: black;
     font-weight: bold;
     font-style: italic;
 }
 #iconP{
-    color: rebeccapurple;
+    color: black;
     font-size: 1.5rem;
     vertical-align: middle;
+}
+#preview{
+    background-color: #585264;
+}
+#preview h3{
+    color: black;
+    text-shadow: none;
 }
